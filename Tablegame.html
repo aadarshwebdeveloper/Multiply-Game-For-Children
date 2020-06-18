@@ -1,0 +1,117 @@
+<html>
+<head>
+  <title>
+    LAMPI GAME
+  </title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    section {
+      background-image:
+      linear-gradient(#fd79a8,#6c5ce7);
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .centerdiv {
+      height: 300px;
+      width: 350px;
+      background-color: #55efc4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+    .input {
+      height: 50px;
+      width: 60px;
+      font-size: 35px;
+      text-align: center;
+    }
+    p {
+      font-size: 20px;
+      padding: 5px;
+    }
+    .answ {
+      height: 50px;
+      width: 60px;
+      font-size: 40px;
+      
+
+    }
+    button {
+      background-color: #fd79a8;
+      border: none;
+      padding: 5px 6px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+
+    }
+
+  </style>
+</head>
+<body>
+  <section>
+    <h1>TABLE GAME FOR LAMPI</h1>
+    <div class="centerdiv">
+
+      <div class="main">
+
+        <div class="first-num">
+          <input type="text"
+          class="input" id="v1" readonly="">
+        </div>
+        <div class="pdiv">
+          <p>
+            x
+          </p>
+        </div>
+        <div class="second-num">
+          <input type="text"
+          class="input" id="v2" readonly="">
+
+        </div>
+        <p>
+          =
+        </p>
+        <div class="answdiv">
+          <input type="number" class="answ" id="ans" placeholder="?">
+          <button onclick="hellow()">CHECK ANSWER</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+
+    let a = Math.floor(Math.random()*25+1);
+    let num1 = document.getElementById("v1").value = a;
+    let b = Math.floor(Math.random()*10+1);
+    let num2 = document.getElementById("v2").value = b;
+
+    function hellow() {
+      var check = a*b;
+      var c = document.getElementById("ans").value;
+
+      if (check == c) {
+        alert("Well Done Your Answer Is Correct :)");
+      } else {
+        alert("Oh, Answer Is "+ check + ".TRY AGAIN");
+      }
+
+    }
+
+  </script>
+</body>
+</html>
